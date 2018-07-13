@@ -50,7 +50,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
      <pre><code>int status = allocateGraphByAssets("graph_face_SSD");
      </code></pre>
 
-3. <span id="jump3" >**getImage(stdValue,meanValue)**</span>:获取graph的图像
+3. <span id="jump3">**getImage(stdValue,meanValue)**</span>:获取graph的图像
   - 参数 Parameters：预处理的值，根据卷积神经网络的区别，参数的值不同，具体参照[模型列表](https://hornedsungem.github.io/Docs/cn/model/)
     - stdValue（float类型）
     - meanValue（float类型）
@@ -74,15 +74,15 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
       bgrImage.getByteBuffer().put(bytes_rgb);
       </code></pre>
 
-4. <span id="jump4" >**deviceGetImage()**</span>:从设备摄像头里取出图像
+4. <span id="jump4">**deviceGetImage()**</span>:从设备摄像头里取出图像
   - 返回 return:返回图像byte[],表示图像的原始数据，**返回值跟getImage()函数相似，此处就不具体阐述**
 
-5. <span id="jump5" >**setZoom( zoom)**</span>：设置获取角蜂鸟的图像分辨率大小，用于处理得到数据，设置图像宽高等
+5. <span id="jump5">**setZoom( zoom)**</span>：设置获取角蜂鸟的图像分辨率大小，用于处理得到数据，设置图像宽高等
   - 参数 zoom(boolean类型):
     - true:设置为true,获取分辨率为640\*360
     - false:设置为false,获取分辨率为1920\*1080
 
-6. <span id="jump6" >**loadTensor(inputTensor,length,userObj)**</span>：把外部的图像或数据传送给角蜂鸟
+6. <span id="jump6">**loadTensor(inputTensor,length,userObj)**</span>：把外部的图像或数据传送给角蜂鸟
 
   **该方法重载，可根据开发者使用参数不同选择对应函数**
 
