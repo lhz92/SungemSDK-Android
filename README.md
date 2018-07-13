@@ -22,7 +22,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
 
 | 返回值    | 函数名  | 描述 |
 | :----- | :------ | :----------: |
-| int | [allocateGraph(String filename)](#allocategraphstring-filename) | 分配卷积神经网络模型到角蜂鸟，传入文件路径|
+| int | [allocateGraph](#allocategraph)(String filename) | 分配卷积神经网络模型到角蜂鸟，传入文件路径|
 | int | [allocateGraphByAssets(String filename)](#jump2) | 分配卷积神经网络模型到角蜂鸟，传入文件在assets下路径 |
 | byte[] | [getImage(float stdValue,float mean)](#jump3) | 获取graph图像 |
 | byte[] | [deviceGetImage()](#jump4) | 获取设备图像 |
