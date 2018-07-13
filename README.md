@@ -31,7 +31,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
 | int | [loadTensor(byte[] data,int length,int parameter)](#jump6) | 角蜂鸟加载经过预处理后的数据 |
 | byte[] | [getResult(int parameter)](#jump7) | retrieve the inference result |
 | void | [close()](#jump8) | 关闭设备 |
-1. <span id="jump1" >**allocateGraph(filename)**</span> ：此函数是分配一个神经网络模型给角蜂鸟，通过加载该模型来实现某个功能
+* #### **allocateGraph(filename)**：此函数是分配一个神经网络模型给角蜂鸟，通过加载该模型来实现某个功能
 
   - 参数 Parameters：
     - filename（String类型） 文件绝对路径    
