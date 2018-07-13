@@ -31,7 +31,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
 | int | [loadTensor(byte[] data,int length,int parameter)](#jump6) | 角蜂鸟加载经过预处理后的数据 |
 | byte[] | [getResult(int parameter)](#jump7) | retrieve the inference result |
 | void | [close()](#jump8) | 关闭设备 |
-1. <h4 id="jump1" >allocateGraph(filename)</h4> ：此函数是分配一个神经网络模型给角蜂鸟，通过加载该模型来实现某个功能
+1. <h4 id="jump1" >allocateGraph(filename)：</h4>此函数是分配一个神经网络模型给角蜂鸟，通过加载该模型来实现某个功能
 
   - 参数 Parameters：
     - filename（String类型） 文件绝对路径    
@@ -50,7 +50,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
      <pre><code>int status = allocateGraphByAssets("graph_face_SSD");
      </code></pre>
 
-3. <h4 id="jump3">getImage(stdValue,meanValue)</h4>:获取graph的图像
+3. <h4 id="jump3">getImage(stdValue,meanValue)：</h4>获取graph的图像
   - 参数 Parameters：预处理的值，根据卷积神经网络的区别，参数的值不同，具体参照[模型列表](https://hornedsungem.github.io/Docs/cn/model/)
     - stdValue（float类型）
     - meanValue（float类型）
@@ -74,15 +74,15 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
       bgrImage.getByteBuffer().put(bytes_rgb);
       </code></pre>
 
-4. <h4 id="jump4" >deviceGetImage()</h4>:从设备摄像头里取出图像
+4. <h4 id="jump4" >deviceGetImage()：</h4>从设备摄像头里取出图像
   - 返回 return:返回图像byte[],表示图像的原始数据，**返回值跟getImage()函数相似，此处就不具体阐述**
 
-5. <h4 id="jump5" >setZoom( zoom)</h4>：设置获取角蜂鸟的图像分辨率大小，用于处理得到数据，设置图像宽高等
+5. <h4 id="jump5" >setZoom(zoom)：</h4>设置获取角蜂鸟的图像分辨率大小，用于处理得到数据，设置图像宽高等
   - 参数 zoom(boolean类型):
     - true:设置为true,获取分辨率为640\*360
     - false:设置为false,获取分辨率为1920\*1080
 
-6. <h4 id="jump6" >loadTensor(inputTensor,length,userObj)</h4>：把外部的图像或数据传送给角蜂鸟
+6. <h4 id="jump6" >loadTensor(inputTensor,length,userObj)：</h4>把外部的图像或数据传送给角蜂鸟
 
     **该方法重载，可根据开发者使用参数不同选择对应函数**
 
@@ -118,7 +118,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
     }
     </code></pre>
 
-7. <h4 id="jump7" >getResult(userObj)</h4>:获取图像处理后的返回结果
+7. <h4 id="jump7" >getResult(userObj)：</h4>获取图像处理后的返回结果
   - 参数 Parameters：
     - userObj(int类型)：**用户配置参数，当前版本未使用，可随意填写**
   - 基本用法 Example：
@@ -157,7 +157,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
       </code></pre>
     2. 数字识别返回结果处理：返回10个float数，分别对应0-9的置信度
     3. 简笔画识别返回结果处理：返回345个float值，分别对应345种物体的置信度，详情可见[手绘识别](https://hornedsungem.github.io/Docs/workflow/)文档
-8. <h4 id="jump8" >close()</h4>: 线程关闭时调用，执行操作包括：deallocate模型,关闭角蜂鸟设备等
+8. <h4 id="jump8" >close()：</h4> 线程关闭时调用，执行操作包括：deallocate模型,关闭角蜂鸟设备等
   - 无参数
   - Example：示例代码
 
@@ -179,7 +179,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
 | void | [openSucceed(ConnectBridge connectBridge)](#jump11) | 搜索到角蜂鸟设备，并连接成功|
 | void | [openFailed()](#jump12) | 角蜂鸟连接失败或未授予权限 |
 | void | [disConnected()](#jump13) | 断开角蜂鸟连接|
-1. <h4 id="jump11" >openSucceed(connectBridge)</h4>: 打开角蜂鸟设备以后的回调函数，主要用于进行通信，比如创建角蜂鸟线程，给出提醒等
+1. <h4 id="jump11" >openSucceed(connectBridge)：</h4> 打开角蜂鸟设备以后的回调函数，主要用于进行通信，比如创建角蜂鸟线程，给出提醒等
   - 参数 Parameters：
     - connectBridge: usb设备通信的连接桥
   - Example: 示例代码
@@ -193,7 +193,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
     }
     </code></pre>
 
-2. <h4 id="jump12" >openFailed()</h4>:打开角蜂鸟设备失败以后的回调函数，主要用于失败以后执行对应操作，比如提醒重新插拔角蜂鸟等
+2. <h4 id="jump12" >openFailed()：</h4>打开角蜂鸟设备失败以后的回调函数，主要用于失败以后执行对应操作，比如提醒重新插拔角蜂鸟等
   - 无参数
   - Example: 部分示例代码
 
@@ -204,7 +204,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
   }
   </code></pre>
 
-3. <h4 id="jump13" >disConnected()</h4>:拔掉角蜂鸟或usb接触有问题的回调函数，用于处理断开后的release操作，比如停止线程等
+3. <h4 id="jump13" >disConnected()：</h4>拔掉角蜂鸟或usb接触有问题的回调函数，用于处理断开后的release操作，比如停止线程等
   - 无参数
   - Example: 部分示例代码
 
