@@ -22,7 +22,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
 
 | 返回值    | 函数名  | 描述 |
 | :----- | :------ | :----------: |
-| int | [allocateGraph(String filename)](#jump1) | 分配卷积神经网络模型到角蜂鸟，传入文件路径|
+| int | [allocateGraph(String filename)](#allocategraph(string-filename)) | 分配卷积神经网络模型到角蜂鸟，传入文件路径|
 | int | [allocateGraphByAssets(String filename)](#jump2) | 分配卷积神经网络模型到角蜂鸟，传入文件在assets下路径 |
 | byte[] | [getImage(float stdValue,float mean)](#jump3) | 获取graph图像 |
 | byte[] | [deviceGetImage()](#jump4) | 获取设备图像 |
@@ -31,7 +31,7 @@ HsBaseThread is a thread for HornedSungem interacion, developers can extend this
 | int | [loadTensor(byte[] data,int length,int parameter)](#jump6) | 角蜂鸟加载经过预处理后的数据 |
 | byte[] | [getResult(int parameter)](#jump7) | retrieve the inference result |
 | void | [close()](#jump8) | 关闭设备 |
-* #### **allocateGraph(filename)**：此函数是分配一个神经网络模型给角蜂鸟，通过加载该模型来实现某个功能
+1. **allocateGraph(String filename)**：此函数是分配一个神经网络模型给角蜂鸟，通过加载该模型来实现某个功能
 
   - 参数 Parameters：
     - filename（String类型） 文件绝对路径    
